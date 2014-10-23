@@ -8,16 +8,23 @@ from xlwt import Workbook,Style
 COOLSCI = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\For Jun (Cool Science Experiments).xlsx'
 TOP10 = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Top 10 Animal Fights.xlsx'
 ASECOND = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\For Jun (A second a Day).xlsx'
+#OA23012 = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\OA23012 Data (1).xlsx'
+OA23012 = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\OA23012 Data (1).xlsx'
 GTCOL = 6
 
 # from DA
 COOLSCI_DA = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Cool Science Experiments You Can Do at Home.mp4_OA23000_New.xlsx'
 TOP10_DA = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Top 10 Animal Fights Cought by Camera.wmv_YAP23001_New.xlsx'
 ASECOND_DA = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\A Second a Day.mp4_OA23000_New.xlsx'
+
+TOP10_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\Top 10 Animal Fights Cought by Camera.wmv_OA23012.xlsx'
+HOME_DEPOT_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\How To Prepare for a Painting Project - The Home Depot.wmv_OA23012.xlsx'
+WORLD_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\What Would Happen If the World Lost Its.mp4_OA23012.xlsx'
+EMBALMING_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\The Embalming Process.mp4_OA23012.xlsx'
 DACOL = 5
 isDA = True
 
-xlsFileName = ASECOND_DA
+xlsFileName = EMBALMING_23012_DA
 # resultFile = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\For Jun (Cool Science Experiments)_result.xls'
 resultFile = xlsFileName.rpartition('.')[0] + '_result.xls'
 
@@ -31,7 +38,7 @@ frameIntervals = []
 preFrame = gpSheet.cell(2, timeColIndex).value
 cFrame = 0
 
-for ri in range(3, gpSheet.nrows - 1, 1):
+for ri in range(3, gpSheet.nrows, 1):
     cFrame = gpSheet.cell(ri, timeColIndex).value
     frameIntervals.append(round(cFrame - preFrame, 3))
     preFrame = cFrame
