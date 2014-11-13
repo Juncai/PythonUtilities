@@ -10,8 +10,12 @@ TOP10 = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Top 10 Ani
 ASECOND = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\For Jun (A second a Day).xlsx'
 #OA23012 = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\OA23012 Data (1).xlsx'
 OA23012 = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\OA23012 Data (1).xlsx'
-GTCOL = 6
 
+GTCOL = 6
+TOP10_23012_GTG = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\GT Issue Oct 22\Top 10 Line 4164.xlsx'
+HOME_DEPOT_23012_GTG = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\GT Issue Oct 22\Home Depot Line 5038.xlsx'
+WORLD_23012_GTG = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\GT Issue Oct 22\What would happen 4279.xlsx'
+EMBALMING_23012_GTG = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\GT Issue Oct 22\Embalming 4965.xlsx'
 # from DA
 COOLSCI_DA = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Cool Science Experiments You Can Do at Home.mp4_OA23000_New.xlsx'
 TOP10_DA = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\Top 10 Animal Fights Cought by Camera.wmv_YAP23001_New.xlsx'
@@ -22,9 +26,11 @@ HOME_DEPOT_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\O
 WORLD_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\What Would Happen If the World Lost Its.mp4_OA23012.xlsx'
 EMBALMING_23012_DA = 'C:\Users\Jon\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\Oct 14\The Embalming Process.mp4_OA23012.xlsx'
 DACOL = 5
-isDA = True
+isDA = False
 
-xlsFileName = EMBALMING_23012_DA
+TimeStampTest = 'C:\Users\Jon\Desktop\TSTest1.xlsx'
+
+xlsFileName = TimeStampTest
 # resultFile = 'E:\Dropbox\PlaIT Lab\eye_tracker\DataAnalysis\For Comparison\For Jun (Cool Science Experiments)_result.xls'
 resultFile = xlsFileName.rpartition('.')[0] + '_result.xls'
 
@@ -32,7 +38,7 @@ wb = open_workbook(xlsFileName)
 
 gpSheet = wb.sheet_by_index(0)
 
-timeColIndex = DACOL
+timeColIndex = 0
 
 frameIntervals = []
 preFrame = gpSheet.cell(2, timeColIndex).value
